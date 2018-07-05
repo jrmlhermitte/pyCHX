@@ -43,7 +43,7 @@ def do_reconstruction(  uid, data_dir0, mask, probe = None, num_iterations =5  )
     diff_patterns = imgsc # np.array(  )
     
     # Scan pattern and get positions
-    tab = get_table(db[uid])
+    tab = db[uid].table()
     posx = tab['diff_xh']
     posy = tab['diff_yh']
     positions0 = np.vstack( [posx, posy ]).T
